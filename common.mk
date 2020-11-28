@@ -23,6 +23,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oneplus/sm8250-common/sm8250-common-vendor.mk)
 
+# include oneplus settings repo
+$(call inherit-product, device/oneplus/settings/settings.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
@@ -111,10 +114,6 @@ PRODUCT_PACKAGES += \
     libvulkan \
     vendor.display.config@1.0 \
     vendor.display.config@2.0
-
-# Doze
-PRODUCT_PACKAGES += \
-    OnePlusDoze
 
 # fastbootd
 PRODUCT_PACKAGES += \
