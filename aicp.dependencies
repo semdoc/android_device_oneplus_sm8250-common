@@ -13,5 +13,10 @@
     "repository":  "AICP/proprietary_vendor_oneplus",
     "target_path": "vendor/oneplus",
     "branch":      "r11.1-staging"
+  },
+  {
+    "repository":  "AICP/device_oneplus_settings",
+    "target_path": "device/oneplus/settings",
+    "branch":      "r11.1"
   }
 ]
