@@ -2,16 +2,16 @@
   {
     "repository":  "LineageOS/android_device_oneplus_common",
     "target_path": "device/oneplus/common",
-    "branch":      "lineage-18.0"
+    "branch":      "lineage-18.1"
   },
   {
     "repository":  "luk1337/android_kernel_oneplus_sm8250",
     "target_path": "kernel/oneplus/sm8250",
-    "branch":      "lineage-18.0"
+    "branch":      "lineage-18.1"
   },
   {
     "repository":  "AICP/proprietary_vendor_oneplus",
     "target_path": "vendor/oneplus",
-    "branch":      "r11.0-staging"
+    "branch":      "r11.1-staging"
   }
 ]
