@@ -343,6 +343,11 @@ vendor/lib64/vendor.display.color@1.4.so
 vendor/lib64/vendor.display.color@1.5.so
 vendor/lib64/vendor.display.postproc@1.0.so
 
+# Dolby
+-system_ext/app/OPSoundTuner/OPSoundTuner.apk|ad7bcd2db376fa59bba7480ee970cdc4699456ef
+-system_ext/priv-app/daxService/daxService.apk
+product/etc/permissions/com.dolby.daxservice.xml
+
 # DPM
 framework/tcmclient.jar
 system_ext/bin/dpmd
