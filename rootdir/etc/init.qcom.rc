@@ -17,22 +17,42 @@ on boot
     # Graphics
     chown system graphics /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_p3_mode
     chmod 0666 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_p3_mode
+
     chown system graphics /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/hbm
     chmod 0666 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/hbm
+
     chown system graphics /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/modes
     chmod 0666 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/modes
 
     chown system graphics /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_p3_color_mode
     chmod 0666 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_p3_color_mode
+
     chown system graphics /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_srgb_color_mode
     chmod 0666 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_srgb_color_mode
+
     chown system graphics /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_wide_color_mode
     chmod 0666 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/native_display_wide_color_mode
+
     chown system graphics /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/night_mode
     chmod 0666 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/night_mode
 
+    # FPS measurement
     chown system graphics /sys/class/drm/sde-crtc-0/measured_fps
     chmod 0666 /sys/class/drm/sde-crtc-0/measured_fps
+
+    #dynamic FPS display path
+    chown system system /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/dynamic_fps
+    chmod 0666 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/dynamic_fps
+
+    # System Info
+    chown system system /sys/devices/platform/soc/3d00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/clock_mhz
+    chmod 0664 /sys/devices/platform/soc/3d00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/clock_mhz
+
+    chown system system /sys/devices/platform/soc/3d00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpu_busy_percentage
+    chmod 0664 /sys/devices/platform/soc/3d00000.qcom,kgsl-3d0/kgsl/kgsl-3d0/gpu_busy_percentage
+
+    chown system system /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/battery/temp
+    chmod 0664 /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/battery/temp
 
     # Touchscreen
     chown system system /proc/touchpanel/double_tap_enable
@@ -68,17 +88,17 @@ on boot
     chown system system /proc/touchpanel/right_arrow_enable
     chmod 0660 /proc/touchpanel/right_arrow_enable
 
-    chown system system /proc/touchpanel/left_swipe_enable
-    chmod 0660 /proc/touchpanel/left_swipe_enable
+#    chown system system /proc/touchpanel/left_swipe_enable
+#    chmod 0660 /proc/touchpanel/left_swipe_enable
 
-    chown system system /proc/touchpanel/right_swipe_enable
-    chmod 0660 /proc/touchpanel/right_swipe_enable
+#    chown system system /proc/touchpanel/right_swipe_enable
+#    chmod 0660 /proc/touchpanel/right_swipe_enable
 
-    chown system system /proc/touchpanel/up_swipe_enable
-    chmod 0660 /proc/touchpanel/up_swipe_enable
+#    chown system system /proc/touchpanel/up_swipe_enable
+#    chmod 0660 /proc/touchpanel/up_swipe_enable
 
-    chown system system /proc/touchpanel/down_swipe_enable
-    chmod 0660 /proc/touchpanel/down_swipe_enable
+#    chown system system /proc/touchpanel/down_swipe_enable
+#    chmod 0660 /proc/touchpanel/down_swipe_enable
 
     chown system system /proc/touchpanel/single_tap_enable
     chmod 0660 /proc/touchpanel/single_tap_enable
