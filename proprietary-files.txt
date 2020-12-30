@@ -12,6 +12,11 @@ system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 system_ext/lib64/libsdm-disp-apis.qti.so
 system_ext/lib64/vendor.display.color@1.0.so
 
+# Dolby
+-system_ext/app/OPSoundTuner/OPSoundTuner.apk|ad7bcd2db376fa59bba7480ee970cdc4699456ef
+-system_ext/priv-app/daxService/daxService.apk
+system_ext/etc/permissions/com.dolby.daxservice.xml
+
 # DPM
 framework/tcmclient.jar
 system_ext/bin/dpmd
