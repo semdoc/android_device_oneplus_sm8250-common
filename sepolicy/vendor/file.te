@@ -1,2 +1,7 @@
 # sysfs
 type sysfs_scsi_target, fs_type, sysfs_type;
+
+#AICP QS Header System Info
+type vendor_sysfs_info, fs_type, sysfs_type;
+type vendor_sysfs_battery_supply, fs_type, sysfs_type;
+type vendor_sysfs_kgsl, fs_type, sysfs_type;
