@@ -35,6 +35,25 @@ vendor.iop.enable_uxe=0
 
 # Media
 media.settings.xml=/system/etc/media_profiles_vendor.xml
+qcom.hw.aac.encoder=true
+
+#system props for the MM modules
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-scan=true
+media.stagefright.thumbnail.prefer_hw_codecs=true
+mmp.enable.3g2=true
+media.aac_51_output_enabled=true
+mm.enable.smoothstreaming=true
+#16777215 is decimal sum of supported codecs in AAL
+#codecs:(PARSER_)AAC AC3 AMR_NB AMR_WB ASF AVI DTS FLV 3GP 3G2 MKV MP2PS MP2TS MP3 OGG QCP WAV FLAC AIFF APE DSD MOV MHAS
+#vendor.mm.enable.qcom_parser=16777215
+#wangbuqing@media,[IKR-21801]disable qcom wav parser,20200817
+vendor.mm.enable.qcom_parser=16711679
+persist.mm.enable.prefetch=true
 
 # Perf
 ro.vendor.qti.core_ctl_max_cpu=4
