@@ -73,3 +73,11 @@ persist.device_config.runtime_native.usap_pool_enabled=true
 
 #Netflix custom property
 ro.netflix.bsp_rev=Q8250-19134-1
+
+#Enable some AUDIO props as per stock
+#Property to enable Codec2 for audio and OMX for Video
+debug.stagefright.ccodec=1
+#xuejie.wen@Connectivity, 2019/11/30, [INT-6139] Add for solve audio crash
+persist.vendor.bt.a2dp.hal.implementation=true
+#rich.yu@MM.Audio, 2020/06/05, enable monitor Rotation
+ro.audio.monitorRotation=true
