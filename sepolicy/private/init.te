@@ -6,10 +6,13 @@ allow init vendor_overlay_file:dir mounton;
 
 # Allow init to chown/chmod on pseudo files in /sys
 allow init {
+    proc_touchpanel
+    sysfs_dm
     sysfs_fod
     sysfs_fpc_proximity
     sysfs_graphics
-}:file { open read setattr };
+    sysfs_vibrator
+}:file { open read setattr write };
 
 # Allow init to write to otg_switch
 allow init sysfs_usb_supply:file w_file_perms;
