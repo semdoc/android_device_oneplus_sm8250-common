@@ -22,4 +22,10 @@
 <resources>
     <!-- Doze: does this device support STATE_DOZE?  -->
     <bool name="doze_display_state_supported">true</bool>
+
+    <!-- Default rounded corner curve (a Bezier). Must match (the curved path in) rounded.xml.
+         Note that while rounded.xml includes the entire path (including the horizontal and vertical
+         corner edges), this pulls out just the curve.
+     -->
+    <string name="config_rounded_mask" translatable="false">M196.755 0H0V208.273C0 116.958 0.153999 68.516 37.062 34.485C73.202 1.163 108.538 0 196.755 0Z</string>
 </resources>
