@@ -294,6 +294,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+#Build libjamesdsp
+PRODUCT_PACKAGES += \
+    JamesDSPManager
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.oneplus_kona \
