@@ -238,7 +238,8 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc \
     vendor.oem_ftm.rc \
     vendor.oem_ftm_svc_disable.rc \
-    init.aicp-sm8250.rc
+    init.aicp-sm8250.rc \
+    init.oneplus.display.rc
 
 # Component overrides
 PRODUCT_COPY_FILES += \
@@ -529,6 +530,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Surface Flinger
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
     ro.surface_flinger.has_HDR_display=true \
@@ -538,3 +540,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.set_touch_timer_ms=200 \
     ro.surface_flinger.use_color_management=true \
     ro.surface_flinger.wcg_composition_dataspace=143261696
+
+# Default Color Mode
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.sf.native_mode=2
