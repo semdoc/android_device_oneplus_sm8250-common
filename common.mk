@@ -286,6 +286,16 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PACKAGES += \
     OnePlusDoze
 
+# Dolby
+PRODUCT_PACKAGES += \
+    vendor.dolby.hardware.dms@2.0-service
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-com.dolby.daxservice.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-com.dolby.daxservice.xml \
+    $(LOCAL_PATH)/configs/privapp-com.oneplus.sound.tuner.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-com.oneplus.sound.tuner.xml \
+    $(LOCAL_PATH)/configs/hiddenapi-com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/hiddenapi-com.dolby.daxservice.xml \
+    $(LOCAL_PATH)/configs/hiddenapi-com.oneplus.sound.tuner.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/hiddenapi-com.oneplus.sound.tuner.xml
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey
@@ -341,6 +351,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vendor/etc/media_codecs_c2.xml \
+    $(LOCAL_PATH)/configs/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vendor/etc/media_codecs_dolby_audio.xml \
     $(LOCAL_PATH)/configs/media_codecs_kona.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_kona.xml \
     $(LOCAL_PATH)/configs/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     $(LOCAL_PATH)/configs/media_codecs_performance_kona.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance_kona.xml \
