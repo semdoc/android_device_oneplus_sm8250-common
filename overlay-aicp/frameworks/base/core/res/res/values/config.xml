@@ -69,45 +69,6 @@
     <bool name="config_dozePulsePickup">true</bool>
     <bool name="config_dozePulseTilt">true</bool>
 
-    <!-- Allow automatic adjusting of the screen brightness while dozing in low power state. -->
-    <bool name="config_allowAutoBrightnessWhileDozing">true</bool>
-
-    <!-- Array of hysteresis constraint values for brightening, represented as tenths of a
-         percent. The length of this array is assumed to be one greater than
-         config_ambientThresholdLevels. The brightening threshold is calculated as
-         lux * (1.0f + CONSTRAINT_VALUE). When the current lux is higher than this threshold,
-         the screen brightness is recalculated. See the config_ambientThresholdLevels
-         description for how the constraint value is chosen. -->
-    <integer-array name="config_ambientBrighteningThresholds">
-        <item>600</item>
-        <item>300</item>
-    </integer-array>
-
-    <!-- Array of hysteresis constraint values for darkening, represented as tenths of a
-         percent. The length of this array is assumed to be one greater than
-         config_ambientThresholdLevels. The darkening threshold is calculated as
-         lux * (1.0f - CONSTRAINT_VALUE). When the current lux is lower than this threshold,
-         the screen brightness is recalculated. See the config_ambientThresholdLevels
-         description for how the constraint value is chosen. -->
-    <integer-array name="config_ambientDarkeningThresholds">
-        <item>600</item>
-        <item>300</item>
-    </integer-array>
-
-    <!-- Array of ambient lux threshold values. This is used for determining hysteresis constraint
-         values by calculating the index to use for lookup and then setting the constraint value
-         to the corresponding value of the array. The new brightening hysteresis constraint value
-         is the n-th element of config_ambientBrighteningThresholds, and the new darkening
-         hysteresis constraint value is the n-th element of config_ambientDarkeningThresholds.
-         The (zero-based) index is calculated as follows: (MAX is the largest index of the array)
-         condition                       calculated index
-         value < level[0]                0
-         level[n] <= value < level[n+1]  n+1
-         level[MAX] <= value             MAX+1 -->
-    <integer-array name="config_ambientThresholdLevels">
-        <item>10</item>
-    </integer-array>
-
     <!-- Whether device has dash charging support -->
     <bool name="config_hasDashCharger">true</bool>
 
