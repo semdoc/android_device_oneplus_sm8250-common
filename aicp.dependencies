@@ -18,11 +18,5 @@
     "repository":  "AICP/device_oneplus_settings",
     "target_path": "device/oneplus/settings",
     "branch":      "r11.1"
-  },
-  {
-    "repository":  "AICP/prebuilts_clang_host_linux-x86_proton",
-    "target_path": "prebuilts/clang/host/linux-x86_proton/clang-proton",
-    "branch":      "master",
-    "clone-depth": "1"
   }
 ]
